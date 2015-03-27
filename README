@@ -2,4 +2,4 @@ Yubikey validation server written in perl, ported from the YK-VAL PHP project.
 Runs as a cgi script on a webserver, only tested with apache on linux.
 Requires the uniqid and mcrypt modules.
 
-This modules does not include any sync features, work only with a local database.
+This module does not include any sync features, work only with a local database.
