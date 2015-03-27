@@ -144,12 +144,11 @@ sub open_log{
 }
 
 sub close_log{
-    close($LOG);
+	close($LOG);
 }
 sub write_log{
-    my $msg = shift;
-    print $LOG "$msg\n";
-    
+	my $msg = shift;
+	print $LOG "$msg\n";
 }
 
 sub getUTCTimeStamp {
