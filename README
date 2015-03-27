@@ -1,4 +1,5 @@
-# perl-ykval
-Yubikey validation server in perl.
-Runs as a cgi script on a webserver.
-Requires uniqid and mcrypt.
+Yubikey validation server written in perl, ported from the YK-VAL PHP project.
+Runs as a cgi script on a webserver, only tested with apache on linux.
+Requires the uniqid and mcrypt modules.
+
+This modules does not include any sync features, work only with a local database.
