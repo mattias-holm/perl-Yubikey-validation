@@ -93,7 +93,7 @@ if(!crc_is_good($decrypted_yubikey)){
 	send_reposnse('CRC error');
 }
 
-# make sure internalname from DB(if set) matches UID from request
+# make sure internalname from DB matches UID from request
 compare_uid_with_internalname($decrypted_yubikey, $db_data{internalname});
 
 # Extract request parameters
@@ -324,7 +324,7 @@ sub compare_uid_with_internalname{
 
 	my $uid = substr($plaintext, 0, 12);
 	write_log("Comparing UID($uid) with internalname($internal_name)");
-	# if internal name is set it has to match $uid
+	# if internal name is set it has to match $uid (if still using "old" yubikeys internal name might not be set)
 	if($internal_name && $uid ne $internal_name){
 		write_log("BAD_OTP: internalname($internal_name) does not match UID($uid)");
 		send_response('BAD_OTP');
